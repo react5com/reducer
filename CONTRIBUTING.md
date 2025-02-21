@@ -12,9 +12,9 @@ We follow a [Code of Conduct](CODE_OF_CONDUCT.md) to create a respectful and inc
 
 There are several ways to contribute to React Reducer SSR:
 
-1. **Bug Reports:** If you encounter any issues or bugs, please [open an issue](https://github.com/alfed7/react-reducer-ssr/issues) on GitHub. Provide as much detail as possible, including the steps to reproduce the problem and your environment.
+1. **Bug Reports:** If you encounter any issues or bugs, please [open an issue](https://github.com/alfed7/@react5/reducer/issues) on GitHub. Provide as much detail as possible, including the steps to reproduce the problem and your environment.
 
-2. **Feature Requests:** If you have an idea for a new feature or improvement, feel free to [open an issue](https://github.com/alfed7/react-reducer-ssr/issues) to discuss it. We value your input.
+2. **Feature Requests:** If you have an idea for a new feature or improvement, feel free to [open an issue](https://github.com/alfed7/@react5/reducer/issues) to discuss it. We value your input.
 
 3. **Code Contributions:** If you want to contribute code changes or fixes, follow the process outlined below.
 
@@ -22,12 +22,12 @@ There are several ways to contribute to React Reducer SSR:
 
 To contribute code to React Reducer SSR, follow these steps:
 
-1. **Fork the Repository:** Fork the [React Reducer SSR repository](https://github.com/alfed7/react-reducer-ssr) to your own GitHub account.
+1. **Fork the Repository:** Fork the [React Reducer SSR repository](https://github.com/alfed7/@react5/reducer) to your own GitHub account.
 
 2. **Clone Your Fork:** Clone your forked repository to your local machine.
 
    ```bash
-   git clone https://github.com/alfed7/react-reducer-ssr.git
+   git clone https://github.com/alfed7/@react5/reducer.git
    ```
 
 3. **Create a Branch:** Create a new branch for your feature or bug fix.
@@ -52,7 +52,7 @@ To contribute code to React Reducer SSR, follow these steps:
    git push origin feature-name
    ```
 
-8. **Create a Pull Request:** Open a pull request (PR) on the [React Reducer SSR repository](https://github.com/alfed7/react-reducer-ssr) with your changes. Be sure to provide a clear and detailed description of your PR.
+8. **Create a Pull Request:** Open a pull request (PR) on the [React Reducer SSR repository](https://github.com/alfed7/@react5/reducer) with your changes. Be sure to provide a clear and detailed description of your PR.
 
 9. **Review and Discussion:** Participate in any discussions or updates requested during the review process.
 

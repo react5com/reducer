@@ -4,23 +4,23 @@ React Reducer SSR is a library that serves as an alternative to Redux for managi
 
 ## Installation
 
-You can easily install `react-reducer-ssr` using either Yarn or npm:
+You can easily install `@react5/reducer` using either Yarn or npm:
 
 ```bash
 # Using Yarn
-yarn add react-reducer-ssr
+yarn add @react5/reducer
 
 # Using npm
-npm install react-reducer-ssr --save
+npm install @react5/reducer --save
 ```
 
 ## Getting Started
 
-To get started with `react-reducer-ssr`, you need to import and configure it in your application. Here's a basic setup example:
+To get started with `@react5/reducer`, you need to import and configure it in your application. Here's a basic setup example:
 
 ```jsx
 import React from 'react';
-import { ReducerProvider } from 'react-reducer-ssr';
+import { ReducerProvider } from '@react5/reducer';
 import { reducers } from "./context";
 
 function App() {
@@ -38,10 +38,10 @@ export default App;
 
 ### Creating Reducers
 
-`react-reducer-ssr` allows you to create reducers to manage your application's state. Here's an example of creating a reducer:
+`@react5/reducer` allows you to create reducers to manage your application's state. Here's an example of creating a reducer:
 
 ```jsx
-import { TypedUseSelectorHook, useStateSelectorT, combineReducers } from 'react-reducer-ssr'
+import { TypedUseSelectorHook, useStateSelectorT, combineReducers } from '@react5/reducer'
 import { preferencesReducer } from './preferences.reducer'
 import { usersReducer } from './users.reducer'
 
@@ -55,7 +55,7 @@ export const useStateSelector: TypedUseSelectorHook<RootState> = useStateSelecto
 ```
 
 ```jsx
-import type { AnyAction } from "react-reducer-ssr";
+import type { AnyAction } from "@react5/reducer";
 
 export interface IUsersState {
   userList?: string[]
@@ -72,7 +72,7 @@ export function usersReducer(draft: IUsersState, action: AnyAction): IUsersState
 
 ### Immutability
 
-`react-reducer-ssr` uses 'immer' internally, thus state mutation is allowed. No need to recreate a new object each time state changes.
+`@react5/reducer` uses 'immer' internally, thus state mutation is allowed. No need to recreate a new object each time state changes.
 
 ### Using Selectors
 
@@ -94,10 +94,10 @@ const MyComponent = () => {
 
 ### Async Actions
 
-You can perform asynchronous actions with `react-reducer-ssr` as well. Here's an example:
+You can perform asynchronous actions with `@react5/reducer` as well. Here's an example:
 
 ```jsx
-import { useDispatch } from 'react-reducer-ssr';
+import { useDispatch } from '@react5/reducer';
 
 const MyComponent = () => {
   const dispatch = useDispatch();
@@ -133,10 +133,10 @@ async function getUsers(companyCode: string) {
 
 ## Server-Side Rendering (SSR) Support
 
-`react-reducer-ssr` offers support for Server-Side Rendering.
+`@react5/reducer` offers support for Server-Side Rendering.
 ```ts
 import { reducers } from "./context";
-import { createServerStore, DispatchFunction } from 'react-reducer-ssr'
+import { createServerStore, DispatchFunction } from '@react5/reducer'
 
 const store = createServerStore(reducers, {/*initial state here*/} as any);
 
@@ -155,7 +155,7 @@ For the complete example see [react-ssr-ts-scss-rollup](https://github.com/alfed
 
 ## Contributing
 
-We welcome contributions from the community! If you'd like to contribute to `react-reducer-ssr`, please follow our [contribution guidelines](CONTRIBUTING.md).
+We welcome contributions from the community! If you'd like to contribute to `@react5/reducer`, please follow our [contribution guidelines](CONTRIBUTING.md).
 
 ## License
 
@@ -163,4 +163,4 @@ This project is licensed under the MIT License. For more information, see the [L
 
 ## Support
 
-For support and bug reports, please [open an issue](https://github.com/alfed7/react-reducer-ssr/issues) on GitHub.
+For support and bug reports, please [open an issue](https://github.com/alfed7/@react5/reducer/issues) on GitHub.
