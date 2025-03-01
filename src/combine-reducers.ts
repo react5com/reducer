@@ -35,14 +35,14 @@ export function combineReducers<M>(
 export function combineReducers<S extends Record<string, any>, A>(reducers: {[key: string]: Reducer<S, A>}) {
   return (rootState: S, action: A): S => {
     rootState = rootState || {}
-    let wasChanged = false;
+    //let wasChanged = false;
     Object.keys(reducers).forEach(k => {
       const nextReducer = reducers[k];
       if(nextReducer) {
-        const nextState = nextReducer(rootState[k] || {}, action);
+        const nextState = nextReducer(rootState[k] || undefined, action);
         if(nextState !== rootState[k]) {
           (rootState as Record<string, any>)[k] = nextState;
-          wasChanged = true;
+          //wasChanged = true;
         }
       }
     });
