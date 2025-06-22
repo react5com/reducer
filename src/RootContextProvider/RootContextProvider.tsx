@@ -14,7 +14,7 @@ export interface IRootContextProps<T extends EmptyState> {
 
 export function RootContextProvider<T extends EmptyState>(
   { children, reducer, customParams, initialState }: IRootContextProps<T>) {
-  const [root, dispatch] = useReducer<Reducer<T, AnyAction>>(
+  const [root, dispatch] = useReducer(
     reducer,
     initialState || reducer(initialState, { type: '@@INIT' })
   );
@@ -57,7 +57,7 @@ export function useLocalReducer<T extends EmptyState>(
   reducer: Reducer<T, AnyAction>,
   initialState: T = {} as T
 ): [T, DispatchFunction] {
-  const [state, dispatch] = useReducer<Reducer<T, AnyAction>>(
+  const [state, dispatch] = useReducer(
     reducer,
     initialState || reducer(initialState, { type: '@@INIT' })
   );
