@@ -26,11 +26,11 @@ export function RootContextProvider<T extends EmptyState>(
 
   return (
     <RootContext.Provider value={root as any}>
-        <DispatchContext.Provider value={memoizedDispatch as any}>
-          <CustomParamsContext.Provider value={customParams}>
-            {children}
-          </CustomParamsContext.Provider>
-        </DispatchContext.Provider>
+      <DispatchContext.Provider value={memoizedDispatch as any}>
+        <CustomParamsContext.Provider value={customParams}>
+          {children}
+        </CustomParamsContext.Provider>
+      </DispatchContext.Provider>
     </RootContext.Provider>
   );
 }
