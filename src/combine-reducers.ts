@@ -49,3 +49,5 @@ export function combineReducers<S extends Record<string, any>, A>(reducers: {[ke
     return {...rootState};
   }
 }
+
+export type IdType = string | number;
