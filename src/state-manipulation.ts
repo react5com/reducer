@@ -73,12 +73,20 @@ function processDispatch<T>(s: T, dispatch: Dispatch<T>, rootState: T, customPar
     const r = (s as ActionFunction)(dispatch as DispatchFunction, rootState, customParams);
     if (isPromise(r)) {
       r
-        .then(((s1: T) => {
+        .then((s1: T) => {
+          // Dispatch the action returned by the thunk if it's not void/undefined
+          if (s1 !== undefined && s1 !== null) {
+            dispatch(s1);
+          }
           resolve();
-        }) as any)
+        })
         .catch((err: any) => reject(err));
     }
     else {
+      // Dispatch the action returned by the thunk if it's not void/undefined
+      if (r !== undefined && r !== null) {
+        dispatch(r as T);
+      }
       resolve();
     }
   }
